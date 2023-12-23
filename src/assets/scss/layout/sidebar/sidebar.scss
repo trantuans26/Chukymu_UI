@@ -1,0 +1,70 @@
+.sidebar {
+  @include box(auto, 100%);
+  color: $white;
+  background-color: $bg-sidebar;
+  overflow-y: auto;
+  flex-shrink: 0;
+  display: flex;
+  &.collapsed {
+    // width: 52px;
+    width: auto;
+    .sidebar__header {
+      display: none;
+    }
+    .sidebar__item__list {
+      display: flex;
+      
+      .sidebar__item {
+        .sidebar__item--text {
+          display: none;
+        }
+      }
+    }
+  }
+  &__header {
+    @include flex-align-center;
+    height: 48px;
+    padding: 24px;
+  }
+  &__content {
+    padding: 14px 0;
+    display: flex;
+  }
+  &__logo {
+    width: auto;
+    img {
+      height: 32px;
+    }
+  }
+  &__item__list {
+    a {
+      color: $text-sidebar;
+    }
+  }
+  &__item {
+    @include box(auto, 42px);
+    padding: 0 14px 0 8px;
+    border-left: 6px transparent solid;
+    text-decoration: none;
+    cursor: pointer;
+    @include flex-align-center;
+    &:hover {
+      background-color: $text-sidebar-hover;
+    }
+    &:focus {
+      background-color: $text-sidebar-hover;
+    }
+  }
+  &__item--icon {
+    margin-right: 8px;
+    @include flex-align-center;
+    div {
+      @include box(22px, 20px);
+      opacity: 0.5;
+    }
+  }
+  &__item--text {
+    font-weight: 500;
+    font-size: 13px;
+  }
+}

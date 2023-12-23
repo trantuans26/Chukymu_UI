@@ -1,0 +1,410 @@
+{
+  "common": {
+    "select_lang": "Chọn ngôn ngữ",
+    "notification": "Thông báo"
+  },
+
+  "login": {
+    "title": "Đăng nhập vào cửa hàng của bạn",
+    "placeholder": {
+      "user": "Email/Số điện thoại của bạn",
+      "password": "Mật khẩu đăng nhập cửa hàng"
+    },
+    "button": "Đăng nhập",
+    "log_out": "Đăng xuất",
+    "log_in": "Đăng nhập",
+    "view": "Xem thông tin cá nhân",
+    "error_tooltip": {
+      "user": "Tên đăng nhập không được để trống!",
+      "password": "Mật khẩu không được để trống!"
+    },
+    "error_message": {
+      "user": "Tên đăng nhập không được để trống!",
+      "password": "Mật khẩu không được để trống!",
+      "userAndPassword": "Tên đăng nhập và mật khẩu không được để trống!",
+      "notExists": "Tên đăng nhập hoặc mật khẩu không tồn tại!"
+    },
+    "forgot_password": "Quên mật khẩu?"
+  },
+
+  "forgot_password": {
+    "title": "Quên mật khẩu",
+    "email": "Địa chỉ email",
+    "reset_password": "Thiết lập mật khẩu mặc định"
+  },
+
+  "sidebar": {
+    "overview": "Tổng quan",
+    "employee": "Nhân viên",
+    "banking": "Tiền gửi",
+    "purchase": "Mua hàng",
+    "sales": "Bán hàng",
+    "manage_invoice": "Hóa đơn bán hàng",
+    "manage_stock": "Quản lý hàng bán",
+    "equipment": "Công cụ",
+    "fixed_asset": "Tài sản cố định",
+    "tax": "Thuế",
+    "price": "Giá thành",
+    "general_ledger": "Tổng hợp",
+    "budget": "Ngân sách",
+    "report": "Báo cáo",
+    "financial_analysis": "Phân tích tài chính",
+    "menu_action": {
+      "collapse": "Thu gọn",
+      "expand": "Mở rộng"
+    }
+  },
+  
+  "action": {
+    "export_excel": "Xuất ra Excel",
+    "reload_data": "Tải lại dữ liệu",
+    "batch_action": "Thực hiện hàng loạt",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "return": "Quay lại",
+    "duplicate": "Nhân bản",
+    "inactive": "Ngưng sử dụng",
+    "active": "Sử dụng",
+    "more_action": "Chức năng khác",
+    "table_setting": "Tùy chỉnh giao diện"
+  },
+
+  "table_filter": {
+    "filter": "Lọc",
+    "cancel": "Bỏ lọc",
+    "filter_by_placeholder": "Nhập giá trị lọc",
+    "is_null": "(Trống)",
+    "is_not_null": "(Không trống)",
+    "equal": "Bằng",
+    "not_equal": "Khác",
+    "contain": "Chứa",
+    "not_contain": "Không chứa",
+    "start_with": "Bắt đầu với",
+    "end_with": "Kết thúc với",
+    "greater_than": "Lớn hơn",
+    "greater_than_or_equal": "Lớn hơn hoặc bằng",
+    "less_than": "Nhỏ hơn",
+    "less_than_or_equal": "Nhỏ hơn hoặc bằng"
+  },
+
+  "action_form": {
+    "save": "Lưu",
+    "save_and_add": "Lưu và Thêm mới",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "help": "Trợ giúp",
+    "choose": "Chọn",
+    "add": "Thêm"
+  },
+
+  "pagination": {
+    "after": "Sau",
+    "before": "Trước",
+    "total": "Tổng số",
+    "record": "bản ghi",
+    "10": "10 bản ghi trên 1 trang",
+    "20": "20 bản ghi trên 1 trang",
+    "30": "30 bản ghi trên 1 trang",
+    "50": "50 bản ghi trên 1 trang",
+    "100": "100 bản ghi trên 1 trang"
+  },
+
+  "validate_error": {
+    "required": "{0} không được để trống!",
+    "invalid": "{0} không hợp lệ!",
+    "invalid_number": "{0} phải là số!",
+    "invalid_phone_number": "{0} không hợp lệ!",
+    "max_length": "{0} không được vượt quá {1} ký tự!",
+    "min_length": "{0} không được nhỏ hơn {1} ký tự!",
+    "over_current_date": "{0} không hợp lệ!",
+    "over_value": "{0} không được lớn hơn {1}!",
+    "less_value": "{0} không được nhỏ hơn {1}!"
+  },
+
+  "notice_message": {
+    "update_information_success": "Cập nhật thông tin cá nhân thành công",
+    "update_information_failed": "Cập nhật thông tin cá nhân thất bại",
+    "insert_success": "Thêm mới <b>{0}</b> thành công",
+    "insert_fail": "Thêm mới <b>{0}</b> thất bại",
+    "update_success": "Cập nhật <b>{0}</b> thành công",
+    "update_fail": "Cập nhật <b>{0}</b> thất bại",
+    "delete_success": "Xóa <b>{0}</b> thành công",
+    "delete_fail": "Xóa <b>{0}</b> thất bại",
+    "delete_many_success": "Xóa nhiều bản ghi thành công",
+    "delete_many_fail": "Lỗi khi xóa nhiều",
+    "not_found": "Không tìm thấy dữ liệu",
+    "unknown_error": "Có lỗi xảy ra, vui lòng thử lại sau",
+    "get_employee_list_fail": "Có lỗi xảy ra khi lấy danh sách!",
+    "get_employee_info_fail": "Có lỗi xảy ra khi lấy thông tin!",
+    "get_department_list_fail": "Có lỗi xảy ra khi lấy danh sách đơn vị!",
+    "reload_data_success": "Tải lại dữ liệu thành công!",
+    "reload_data_fail": "Tải lại dữ liệu thất bại!",
+    "export_excel_success": "Xuất danh sách ra Excel thành công!",
+    "export_excel_fail": "Xuất danh sách ra Excel thất bại!",
+    "export_excel_processing": "Đang xuất danh sách ra Excel...",
+    "developing": "Chức năng <b>{0}</b> đang được phát triển!",
+    "page_developing": "Trang {0} đang được phát triển!",
+    "confirm_delete": "Bạn có thực sự muốn xóa <b>&lt{0}&gt</b> không?",
+    "confirm_delete_many": "Bạn có thực sự muốn xóa những bản ghi đã chọn không?",
+    "confirm_data_close": "Dữ liệu đã bị thay đổi. Bạn có muốn Lưu không?",
+    "sendmail_success": "Mật khẩu đã được gửi tới email của bạn",
+    "sendmail_fail": "Mật khẩu gửi tới mail thất bại"
+  },
+
+  "confirm_popup": {
+    "yes": "Có",
+    "no": "Không",
+    "cancel": "Hủy",
+    "close": "Đóng"
+  },
+
+  "toast": {
+    "success": "Thành công",
+    "error": "Lỗi",
+    "warning": "Cảnh báo",
+    "info": "Thông tin"
+  },
+
+  "quick_key": {
+    "info": {
+      "title": "Phím tắt",
+      "description": "Danh sách phím tắt",
+      "key": "Phím tắt",
+      "action": "Chức năng"
+    },
+
+    "key": {
+      "save": "Ctrl + S",
+      "save_and_add": "Ctrl + Shift + S",
+      "add": "Ctrl + Alt + A",
+      "close": "Esc",
+      "delete": "Delete",
+      "reload": "Ctrl + R",
+      "export_excel": "Ctrl + Alt + E",
+      "change_language": "Ctrl + Alt + L",
+      "collapse": "Ctrl + Alt + C",
+      "show_keyboard_shortcut": "Ctrl + F1"
+    },
+
+    "key_label": {
+      "save": "Lưu và đóng",
+      "save_and_add": "Lưu và Thêm mới",
+      "add": "Thêm mới",
+      "close": "Đóng",
+      "delete": "Xóa",
+      "reload": "Tải lại dữ liệu trong bảng",
+      "export_excel": "Xuất danh sách nhân viên ra Excel",
+      "change_language": "Thay đổi ngôn ngữ hiển thị (Tiếng Việt/English)",
+      "collapse": "Thu gọn/ Mở rộng menu bên trái",
+      "show_keyboard_shortcut": "Hiển thị bảng phím tắt"
+    }
+  },
+
+  "dashboard_page": {
+    "title": "Tổng quan",
+    "invoice": "Đơn mua hàng",
+    "inventory": "Thông tin hàng bán",
+    "revenue": "Doanh thu nhiều nhất",
+    "inventory_value": "Giá trị hàng bán",
+    "current_year": "Năm nay",
+    "last_year": "Năm ngoái",
+    "current_month": "Tháng này",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "current_week": "Tuần này",
+    "last_week": "Tuần trước",
+    "January": "Tháng 1",
+    "February": "Tháng 2",
+    "March": "Tháng 3",
+    "April": "Tháng 4",
+    "May": "Tháng 5",
+    "June": "Tháng 6",
+    "July": "Tháng 7",
+    "August": "Tháng 8",
+    "September": "Tháng 9",
+    "October": "Tháng 10",
+    "November": "Tháng 11",
+    "December": "Tháng 12",
+    "All": "Tất cả",
+    "inventory_warning": "Sắp hết hàng",
+    "inventory_empty": "Hết hàng"
+  },
+
+  "dashboard_form": {
+    "name": "Tên",
+    "quantity": "Số lượng",
+    "cost": "Giá trị",
+    "total_cost": "Tổng giá trị",
+    "sum_total_cost": "Giá trị đơn hàng",
+    "is_collected": "Đã thanh toán",
+    "is_not_collected": "Chưa thanh toán",
+    "invoice": "Hóa đơn",
+    "customer":"Thông tin khách hàng",
+    "inventory_code": "Mã hàng",
+    "inventory_name": "Tên hàng"
+  },
+
+  "employee_page": {
+    "title": "Danh sách nhân viên",
+    "add_employee": "Thêm nhân viên",
+    "search_function": "Tìm theo mã, tên, số điện thoại"
+  },
+  "employee_table": {
+    "code": "Mã nhân viên",
+    "name": "Tên nhân viên",
+    "gender": "Giới tính",
+    "date_of_birth": "Ngày sinh",
+    "identity_card": "Số CMND",
+    "job_title": "Chức danh",
+    "department": "Đơn vị",
+    "bank_number": "Số tài khoản",
+    "bank_name": "Tên ngân hàng",
+    "bank_branch": "Chi nhánh ngân hàng",
+    "action": "Chức năng"
+  },
+  "employee_info": {
+    "title": "Thông tin nhân viên",
+    "code": "Mã",
+    "name": "Tên",
+    "department": "Đơn vị",
+    "job_title": "Chức danh",
+    "date_of_birth": "Ngày sinh",
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ",
+    "other": "Khác",
+    "identity_card": "Số CMND",
+    "identity_card_label": "Số chứng minh nhân dân",
+    "issued_date": "Ngày cấp",
+    "issued_by": "Nơi cấp",
+    "address": "Địa chỉ",
+    "phone_number": "ĐT di động",
+    "phone_number_label": "Điện thoại di động",
+    "home_phone_number": "ĐT cố định",
+    "home_phone_number_label": "Điện thoại cố định",
+    "email": "Email",
+    "bank_number": "Tài khoản ngân hàng",
+    "bank_name": "Tên ngân hàng",
+    "bank_branch": "Chi nhánh",
+    "is_employee": "Là nhân viên",
+    "is_manager": "Là quản lý"
+  },
+
+  "inventory_page": {
+    "title": "Danh sách hàng bán",
+    "add_inventory": "Thêm hàng bán",
+    "search_function": "Tìm theo mã, tên hàng"
+  },
+  "inventory_table": {
+    "code": "Mã hàng",
+    "name": "Tên hàng",
+    "quantity": "Số lượng",
+    "cost": "Đơn giá",
+    "inventory_category": "Danh mục hàng bán",
+    "image": "Hình ảnh",
+    "action": "Chức năng"
+  },
+  "inventory_info": {
+    "title": "Thông tin hàng bán",
+    "code": "Mã",
+    "name": "Tên",
+    "inventory_category": "Danh mục hàng bán",
+    "inventory": "Chọn sản phẩm",
+    "quantity": "Số lượng",
+    "cost": "Đơn giá",
+    "description": "Mô tả",
+    "image": "Hình ảnh"
+  },
+
+  "sales_page": {
+    "title": "Bán hàng",
+    "add_sales": "Thêm hóa đơn",
+    "search_function": "Tìm theo mã, tên hàng"
+  },
+  "sales_table": {
+    "code": "Mã hàng",
+    "name": "Tên hàng",
+    "quantity": "Số lượng",
+    "cost": "Đơn giá",
+    "sales_category": "Danh mục hàng hóa",
+    "image": "Hình ảnh",
+    "action": "Chức năng"
+  },
+  "sales_info": {
+    "title": "Thông tin hàng hóa",
+    "code": "Mã",
+    "name": "Tên",
+    "sales_category": "Danh mục hàng hóa",
+    "quantity": "Số lượng",
+    "cost": "Đơn giá",
+    "description": "Mô tả",
+    "image": "Hình ảnh"
+  },
+
+  "invoice_page": {
+    "title": "Danh sách hóa đơn",
+    "search_function": "Tìm theo mã hóa đơn, người tạo",
+    "filter": "Lọc",
+    "add": "Bán hàng"
+  },
+  "invoice_table": {
+    "code": "Số hóa đơn",
+    "total_cost": "Giá trị hóa đơn",
+    "purchase_date": "Ngày mua",
+    "employee": "Nhân viên bán hàng",
+    "customer": "Thông tin khách hàng",
+    "action": "Chức năng"
+  },
+  "invoice_info": {
+    "title": "Hóa đơn bán hàng",
+    "customer": "Thông tin khách hàng",
+    "employee": "Nhân viên bán hàng",
+    "purchase_date": "Ngày mua",
+    "total_cost": "Tổng tiền thanh toán",
+    "description": "Mô tả",
+    "invoice_code": "Số hóa đơn",
+    "is_collected": "Đã thu tiền",
+    "list_products": "Hàng tiền",
+    "code": "Mã hàng",
+    "name": "Tên hàng",
+    "quantity": "Số lượng",
+    "cost": "Đơn giá",
+    "total": "Tổng tiền"
+  },
+  "authencator_infor": {
+    "title": "Thông tin cá nhân",
+    "code": "Mã",
+    "name": "Tên",
+    "department": "Đơn vị",
+    "job_title": "Chức danh",
+    "date_of_birth": "Ngày sinh",
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ",
+    "other": "Khác",
+    "identity_card": "Số CMND",
+    "identity_card_label": "Số chứng minh nhân dân",
+    "issued_date": "Ngày cấp",
+    "issued_by": "Nơi cấp",
+    "address": "Địa chỉ",
+    "phone_number": "ĐT di động",
+    "phone_number_label": "Điện thoại di động",
+    "email": "Email",
+    "bank_number": "Tài khoản ngân hàng",
+    "bank_name": "Tên ngân hàng",
+    "bank_branch": "Chi nhánh",
+    "is_employee": "Là nhân viên",
+    "is_manager": "Là quản lý",
+    "password": "Mật khẩu"
+  },
+
+  "filter": {
+    "all": "Tất cả",
+    "is_employee":"Nhân viên",
+    "is_manager": "Quản lý",
+    "is_collected":"Đã thu tiền",
+    "is_not_collected": "Chưa thu tiền",
+    "runnin_out-of-stock": "Sắp hết hàng",
+    "out-of-stock": "Hết hàng"
+  }
+}

@@ -1,0 +1,221 @@
+// Placeholder Mixins
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+@mixin generate-class-spacing($property, $class, $spacer) {
+  .#{$class}-0 {
+    #{$property}: 0 !important;
+  }
+  .#{$class}-1 {
+    #{$property}: $spacer * 0.25 !important;
+  }
+  .#{$class}-2 {
+    #{$property}: $spacer * 0.5 !important;
+  }
+  .#{$class}-3 {
+    #{$property}: $spacer !important;
+  }
+  .#{$class}-4 {
+    #{$property}: $spacer * 1.5 !important;
+  }
+  .#{$class}-5 {
+    #{$property}: $spacer * 3 !important;
+  }
+  .#{$class}-t-0 {
+    #{$property}-top: 0 !important;
+  }
+  .#{$class}-t-1 {
+    #{$property}-top: $spacer * 0.25 !important;
+  }
+  .#{$class}-t-2 {
+    #{$property}-top: $spacer * 0.5 !important;
+  }
+  .#{$class}-t-3 {
+    #{$property}-top: $spacer !important;
+  }
+  .#{$class}-t-4 {
+    #{$property}-top: $spacer * 1.5 !important;
+  }
+  .#{$class}-t-5 {
+    #{$property}-top: $spacer * 3 !important;
+  }
+  .#{$class}-r-0 {
+    #{$property}-right: 0 !important;
+  }
+  .#{$class}-r-1 {
+    #{$property}-right: $spacer * 0.25 !important;
+  }
+  .#{$class}-r-2 {
+    #{$property}-right: $spacer * 0.5 !important;
+  }
+  .#{$class}-r-3 {
+    #{$property}-right: $spacer !important;
+  }
+  .#{$class}-r-4 {
+    #{$property}-right: $spacer * 1.5 !important;
+  }
+  .#{$class}-r-5 {
+    #{$property}-right: $spacer * 3 !important;
+  }
+
+  .#{$class}-b-0 {
+    #{$property}-bottom: 0 !important;
+  }
+  .#{$class}-b-1 {
+    #{$property}-bottom: $spacer * 0.25 !important;
+  }
+  .#{$class}-b-2 {
+    #{$property}-bottom: $spacer * 0.5 !important;
+  }
+  .#{$class}-b-3 {
+    #{$property}-bottom: $spacer !important;
+  }
+  .#{$class}-b-4 {
+    #{$property}-bottom: $spacer * 1.5 !important;
+  }
+  .#{$class}-b-5 {
+    #{$property}-bottom: $spacer * 3 !important;
+  }
+
+  .#{$class}-l-0 {
+    #{$property}-left: 0 !important;
+  }
+  .#{$class}-l-1 {
+    #{$property}-left: $spacer * 0.25 !important;
+  }
+  .#{$class}-l-2 {
+    #{$property}-left: $spacer * 0.5 !important;
+  }
+  .#{$class}-l-3 {
+    #{$property}-left: $spacer !important;
+  }
+  .#{$class}-l-4 {
+    #{$property}-left: $spacer * 1.5 !important;
+  }
+  .#{$class}-l-5 {
+    #{$property}-left: $spacer * 3 !important;
+  }
+
+  .#{$class}-x-0 {
+    #{$property}-left: 0 !important;
+    #{$property}-right: 0 !important;
+  }
+  .#{$class}-x-1 {
+    #{$property}-left: $spacer * 0.25 !important;
+    #{$property}-right: $spacer * 0.25 !important;
+  }
+  .#{$class}-x-2 {
+    #{$property}-left: $spacer * 0.5 !important;
+    #{$property}-right: $spacer * 0.5 !important;
+  }
+  .#{$class}-x-3 {
+    #{$property}-left: $spacer !important;
+    #{$property}-right: $spacer !important;
+  }
+  .#{$class}-x-4 {
+    #{$property}-left: $spacer * 1.5 !important;
+    #{$property}-right: $spacer * 1.5 !important;
+  }
+  .#{$class}-x-5 {
+    #{$property}-left: $spacer * 3 !important;
+    #{$property}-right: $spacer * 3 !important;
+  }
+
+  .#{$class}-y-0 {
+    #{$property}-top: 0 !important;
+    #{$property}-bottom: 0 !important;
+  }
+  .#{$class}-y-1 {
+    #{$property}-top: $spacer * 0.25 !important;
+    #{$property}-bottom: $spacer * 0.25 !important;
+  }
+  .#{$class}-y-2 {
+    #{$property}-top: $spacer * 0.5 !important;
+    #{$property}-bottom: $spacer * 0.5 !important;
+  }
+  .#{$class}-y-3 {
+    #{$property}-top: $spacer !important;
+    #{$property}-bottom: $spacer !important;
+  }
+  .#{$class}-y-4 {
+    #{$property}-top: $spacer * 1.5 !important;
+    #{$property}-bottom: $spacer * 1.5 !important;
+  }
+  .#{$class}-y-5 {
+    #{$property}-top: $spacer * 3 !important;
+    #{$property}-bottom: $spacer * 3 !important;
+  }
+}
+
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number
+    {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: "") {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: "") {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args: "") {
+  @include position(relative, $args);
+}

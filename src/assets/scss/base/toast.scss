@@ -1,0 +1,89 @@
+.v-move,
+/* apply transition to moving elements */
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.v-leave-active {
+  position: absolute;
+}
+
+.v {
+  &-toast {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+    font-size: 14px;
+  }
+
+  &-toast__content {
+    @include flex-align-center;
+    background-color: $bg-toast;
+    border-radius: $border-radius;
+    box-shadow: $bg-box-shadow;
+    height: 56px;
+    margin-top: 18px;
+    max-width: 650px;
+    min-width: 450px;
+    padding: 16px;
+  }
+
+  &-toast__icon {
+    @include box(24px);
+    @include flex-center;
+    flex-shrink: 0;
+
+    &:has(.ms-icon-toast-info) {
+      background-color: $bg-toast-info;
+      border-radius: 50%;
+    }
+  }
+
+  &-toast__text {
+    @include flex-align-center;
+    padding: 0 16px 0 8px;
+    flex-shrink: 0;
+    flex: 1;
+
+    .type {
+      margin-right: 4px;
+      font-weight: 600;
+    }
+  }
+
+  &-toast__button {
+    @include box(16px);
+    @include flex-center;
+    text-align: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% + 20px));
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.v-tooltip__text {
+  z-index: 9999;
+  display: none;
+  text-align: center;
+  position: fixed;
+  pointer-events: none;
+  padding: 0 4px;
+  opacity: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.8rem;
+  font-family: $Misa-font-regular;
+  color: $white;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  border-radius: $border-radius;
+  background: $bg-tooltip;
+
+  &.show {
+    display: block;
+    opacity: 0.9;
+  }
+}

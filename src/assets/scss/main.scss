@@ -1,0 +1,70 @@
+//  Bao gồm các biến và mixin
+@import "variables/variables";
+@import "mixins/mixins";
+@import "reset";
+@import "predefine";
+
+@import "utils/grid";
+@import "utils/form";
+@import "utils/icons";
+@import "utils/font";
+@import "utils/display";
+@import "base/tooltip_base/tooltip";
+
+@import "base/datepicker";
+@import "base/filter.scss";
+
+@import "layout/header/header";
+@import "layout/sidebar/sidebar";
+@import "layout/content/content";
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.v-input__label {
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: "MISA Fonts Bold";
+  margin-bottom: 8px;
+
+  span {
+    color: $border-red;
+  }
+}
+.v-form__label-small {
+  .v-input__label {
+    margin-bottom: 4px;
+  }
+  .form-group {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: $white;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $bg-grey;
+}

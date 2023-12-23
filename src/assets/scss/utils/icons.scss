@@ -1,0 +1,399 @@
+.ms {
+  /* icon size */
+  &-12 {
+    @include box(12px);
+    min-width: 12px;
+    min-height: 12px;
+  }
+  &-14 {
+    @include box(14px);
+    min-width: 14px;
+    min-height: 14px;
+  }
+  &-16 {
+    @include box(16px);
+    min-width: 16px;
+    min-height: 16px;
+  }
+  &-18 {
+    @include box(18px);
+    min-width: 18px;
+    min-height: 18px;
+  }
+  &-20 {
+    @include box(20px);
+    min-width: 20px;
+    min-height: 20px;
+  }
+  &-22 {
+    @include box(22px);
+    min-width: 22px;
+    min-height: 22px;
+  }
+  &-24 {
+    @include box(24px);
+    min-width: 24px;
+    min-height: 24px;
+  }
+  &-30 {
+    @include box(30px);
+    min-width: 30px;
+    min-height: 30px;
+  }
+  &-32 {
+    @include box(32px);
+    min-width: 32px;
+    min-height: 32px;
+  }
+  &-48 {
+    @include box(48px);
+    min-width: 48px;
+    min-height: 48px;
+  }
+  &-64 {
+    @include box(64px);
+    min-width: 64px;
+    min-height: 64px;
+  }
+  &-85 {
+    @include box(85px);
+    min-width: 85px;
+    min-height: 85px;
+  }
+  &-90 {
+    @include box(90px);
+    min-width: 90px;
+    min-height: 90px;
+  }
+  &-round {
+    border-radius: 50%;
+  }
+  &-auto {
+    @include box(auto);
+    min-width: auto;
+    min-height: auto;
+  }
+  &-fill {
+    @include box(100%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+.ms-icon {
+  background: url($sprite-img) no-repeat;
+  &-v2 {
+    background: url($sprite-img-v2) no-repeat;
+    cursor: pointer;
+  }
+  cursor: pointer;
+  @include flex-center;
+  &-arrow-right {
+    background-position: -1349px -563px;
+    transform: rotate(90deg) translate(25%, 25%);
+  }
+  &-arrow-left {
+    background-position: -1690px -524px;
+    transform: rotate(-90deg) translate(25%, 25%);
+  }
+  &-arrow-down {
+    background-position: -1690px -524px;
+  }
+  &-arrow-up {
+    background-position: -1690px -524px;
+  }
+  &-reload {
+    background-position: -423px -201px;
+    &:hover {
+      background-position: -1097px -88px;
+    }
+  }
+  &-reload-small {
+    background-position: -1887px -833px;
+    &:hover {
+      background-position: -1930px -833px;
+    }
+  }
+  &-excel {
+    background-position: -704px -200px;
+    &:hover {
+      background-position: -704px -256px;
+    }
+  }
+  &-search {
+    background-position: -992px -360px;
+  }
+  &-datepicker {
+    background-position: -124px -309px;
+  }
+  &-three-stripes {
+    background-position: -843px -30px;
+  }
+  &-three-stripes--white {
+    background-position: -316px -37px;
+  }
+  &-small-user {
+    background-position: -352px -894px;
+  }
+  &-chevron-down {
+    background-position: -1076px -32px;
+  }
+  &-chevron-left {
+    background-position: -35px -360px !important;
+  }
+  &-chevron-big-down {
+    background-position: -80px -360px;
+    transform: rotate(90deg);
+  }
+  &-chevron-up--primary {
+    background-position: -128px -360px;
+  }
+  &-chevron-down--primary {
+    background-position: -176px -360px;
+  }
+  &-meter {
+    background-position: -592px -200px;
+    &:hover {
+      background-position: -592px -256px;
+    }
+  }
+  &-arrow-check-all {
+    background-position: -256px -143px;
+  }
+  &-search-tax {
+    background-position: -2240px -521px;
+  }
+  &-bell {
+    &:hover {
+      animation: bell 0.3s backwards;
+    }
+    background-position: -788px -30px;
+    @keyframes bell {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(20deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(-20deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &-nine-dots {
+    background-position: -424px -86px;
+  }
+  &-dashboard {
+    background-position: -30px -1587px;
+  }
+  &-cash {
+    background-position: -74px -1588px;
+  }
+  &-employee {
+    background-position: -165px -1664px;
+  }
+  &-bank {
+    background-position: -118px -1588px;
+  }
+  &-buy {
+    background-position: -162px -1588px;
+  }
+  &-sell {
+    background-position: -206px -1588px;
+  }
+  &-bill {
+    background-position: -250px -1588px;
+  }
+  &-warehouse {
+    background-position: -291px -1588px;
+  }
+  &-tool {
+    background-position: -335px -1588px;
+  }
+  &-fixed-asset {
+    background-position: -379px -1588px;
+  }
+  &-tax {
+    background-position: -423px -1588px;
+  }
+  &-price {
+    background-position: -467px -1588px;
+  }
+  &-summary {
+    background-position: -511px -1588px;
+  }
+  &-budget {
+    background-position: -423px -1661px;
+  }
+  &-report {
+    background-position: -547px -1590px;
+  }
+  &-analysis {
+    background-position: -248px -1662px;
+  }
+  &-arrow-down {
+    background-position: -896px -359px;
+  }
+  &-arrow-down-black {
+    background-position: -560px -359px;
+  }
+  &-arrow-down-white {
+    background-position: -848px -359px;
+  }
+  &-arrow-down-blue {
+    // ms-12
+    background-position: -178px -362px;
+  }
+
+  &-arrow-up-black {
+    background-position: -560px -359px;
+    transform: rotate(180deg);
+  }
+  &-info {
+    background-position: -826px -456px;
+  }
+
+  &-warning {
+    background-position: -592px -456px;
+  }
+
+  &-error {
+    // background-position: -752px -462px;
+    background-position: -24px -954px;
+  }
+  &-close {
+    background-position: -144px -144px;
+  }
+
+  &-help {
+    background-position: -89px -144px;
+  }
+  &-toast-success {
+    background-position: -1602px -258px;
+  }
+
+  &-toast-error {
+    background-position: -538px -146px;
+  }
+
+  &-toast-warning {
+    background-position: -593px -145px;
+  }
+
+  &-toast-info {
+    background-position: -873px -145px;
+  }
+
+  &-toast-x {
+    background-position: -1178px -362px;
+  }
+  &-setting {
+    background-position: -88px -200px;
+    &:hover {
+      background-position: -88px -256px;
+    }
+  }
+  &-process-stock {
+    background-position: -1264px -200px;
+  }
+  &-process-inventory {
+    background-position: -1152px -200px;
+  }
+  &-process-unit-price {
+    background-position: -872px -256px;
+  }
+  &-process-tool {
+    background-position: -1040px -200px;
+  }
+  &-process-setting {
+    background-position: -648px -200px;
+  }
+  &-chevron-left {
+    background-position: -224px -360px;
+  }
+  &-inventory-item-category {
+    background-position: -31px -631px;
+  }
+  &-inventory-item-category-detail {
+    background-position: -32px -748px;
+  }
+  &-construct-item-category {
+    background-position: -264px -631px;
+  }
+  &-construct-item-category-detail {
+    background-position: -170px -748px;
+  }
+  &-mataerial-item-category {
+    background-position: -960px -631px;
+  }
+  &-mataerial-item-category-detail {
+    background-position: -597px -748px;
+  }
+  &-clothes-item-category {
+    background-position: -148px -631px;
+  }
+  &-clothes-item-category-detail {
+    background-position: -101px -748px;
+  }
+  &-tool-item-category {
+    background-position: -1078px -631px;
+  }
+  &-tool-item-category-detail {
+    background-position: -678px -749px;
+  }
+  &-plus-success {
+    background-position: -32px -312px;
+  }
+  &-minimun-stock {
+    background-position: -27px -1311px;
+  }
+  &-over-stock {
+    background-position: -139px -1307px;
+  }
+  &-preview-image {
+    background-position: -25px -448px;
+    transform: scale(1.5);
+  }
+  &-edit-upload-file {
+    background-position: -412px -308px;
+  }
+  &-delete-upload-file {
+    background-position: -460px -308px;
+  }
+  &-download-upload-file {
+    background-position: -1549px -403px;
+  }
+  &-arrow-right-black {
+    background-position: -320px -360px;
+  }
+  &-arrow-bottom-black {
+    background-position: -320px -360px;
+    transform: rotate(90deg);
+  }
+  &-close-small {
+    background-position: -80px -312px;
+  }
+  &-selected-small {
+    background-position: -896px -312px;
+  }
+  &-header-option {
+    background-position: -1687px -564px;
+  }
+  &-header-pin {
+    background-position: -1726px -560px;
+  }
+  &-tree-collapse-small {
+    background-position: -559px -312px;
+  }
+  &-tree-expand-small {
+    background-position: -607px -311px;
+  }
+  &-tour {
+    background-position: -984px -144px;
+  }
+}

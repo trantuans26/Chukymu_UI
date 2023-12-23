@@ -1,0 +1,51 @@
+.content {
+  @include flex-column;
+  @include box(100%, 100%);
+  position: relative;
+  background-color: $bg-content;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 12px 30px 0 20px;
+  overflow: auto;
+  &-area {
+    flex: 1;
+    @include flex-column;
+    @include box(100%, 100%);
+    overflow: auto;
+  }
+  &.content--collapsed {
+    max-width: calc(100% - 74px);
+  }
+  &-header {
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+  &-header__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-header__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    font-family: $Misa-font-bold;
+  }
+  &-header__action {
+    display: flex;
+    align-items: center;
+  }
+  &-header__action-item {
+    margin-left: 12px;
+  }
+  &-header__breadcumb {
+    cursor: pointer;
+    width: max-content;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+  }
+  &-header__breadcumb--text {
+    color: #0075c0;
+  }
+}

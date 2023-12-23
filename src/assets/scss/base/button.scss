@@ -1,0 +1,91 @@
+.v {
+  &-button {
+    white-space: nowrap;
+    height: $height-button;
+
+    &__button {
+      @include flex-center;
+      transition: all 0.25s ease;
+      padding: 0px 16px;
+      outline: none;
+      height: 100%;
+      cursor: pointer;
+      color: $white;
+      border: none;
+      border-radius: $border-radius;
+      background-color: $bg-green;
+
+      &:hover {
+        background-color: $bg-green-hover;
+      }
+
+      &:active {
+        background-color: $bg-green-active;
+      }
+
+      &:focus {
+        background-color: $bg-green-active;
+        box-shadow: 0 0 0 4px $bg-grey-hover;
+        outline: none;
+      }
+
+      &.secondary {
+        border: 1px solid $bg-grey;
+        color: $black;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $bg-grey-hover;
+        }
+
+        &:active {
+          background-color: $bg-grey-active;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 4px $bg-grey-hover;
+        }
+      }
+
+      &.secondary-light {
+        border: 1px solid $bg-grey;
+        color: $black;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $bg-grey-hover;
+        }
+
+        &:active {
+          background-color: $bg-grey-active;
+        }
+        &:focus {
+          box-shadow: 0 0 0 4px $bg-grey-hover;
+        }
+      }
+
+      &.rounded {
+        border-radius: 30px;
+      }
+
+      &.border-bold {
+        border: 2px solid #3b3c3f;
+      }
+    }
+
+    &__text {
+      font-family: "MISA Fonts Bold";
+      font-size: 13px;
+      font-weight: 600;
+      position: relative;
+      color: inherit;
+      display: inline-block;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      line-height: 13px;
+    }
+
+    &__icon {
+    }
+  }
+}

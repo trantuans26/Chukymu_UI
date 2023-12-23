@@ -1,0 +1,98 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.v-dialog__content--right {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .v {
+    &-dialog__header {
+      padding-bottom: 0;
+    }
+    &-dialog__title {
+      padding: 14px 0px 12px 20px;
+    }
+    &-line {
+      display: none;
+    }
+    &-dialog__body {
+      padding: 0;
+      flex: 1;
+    }
+  }
+}
+.v {
+  &-dialog__content {
+    min-width: 444px;
+  }
+  &-dialog__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &-dialog__title {
+    width: 100%;
+    padding: 20px 24px 20px 24px;
+    padding-right: 12px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+  &-dialog__close {
+    display: flex;
+    padding: 12px;
+
+    .ms-icon {
+      margin-left: 6px;
+    }
+  }
+  &-dialog__body {
+    transition: all 0.23s ease 0.1s;
+    flex-direction: column;
+    display: flex;
+    overflow: auto;
+    overflow-y: visible;
+    padding: 0 24px 0 24px;
+  }
+  &-line {
+    height: 1px;
+    background: $border-grey;
+  }
+  &-dialog__footer {
+    justify-content: space-between;
+    @include flex-align-center;
+    flex-direction: row-reverse;
+    padding: 20px 24px 20px 24px;
+  }
+}
+.footer {
+  &__right {
+    @include flex-align-center;
+    justify-content: flex-end;
+
+    .v-button {
+      margin-left: 8px;
+    }
+  }
+  &__left {
+    @include flex-align-center;
+    justify-content: flex-start;
+
+    .v-button {
+      margin-right: 8px;
+    }
+  }
+}
+
+.form--inventory .v {
+  &-dialog__content {
+    width: 620px
+  }
+}

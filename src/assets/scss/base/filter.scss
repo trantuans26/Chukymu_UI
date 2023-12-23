@@ -1,0 +1,28 @@
+.filter {
+  &-condition {
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+    margin: 0 10px;
+    flex-wrap: wrap;
+  }
+
+  &-condition__item {
+    display: flex;
+    color: #0075c0;
+    white-space: nowrap;
+    align-items: center;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  &-condition__delete {
+    margin-left: 4px;
+  }
+
+  &-condition__remove {
+    color: #0075c0;
+    display: inline-block;
+    cursor: pointer;
+  }
+}

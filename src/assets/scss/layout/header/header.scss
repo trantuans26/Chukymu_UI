@@ -1,0 +1,7 @@
+.header {
+  height: 48px;
+  width: 100%;
+  @include flex-align-center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-line;
+}

@@ -1,0 +1,118 @@
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s;
+}
+
+.v-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .v-dropdown__button {
+    @include flex-align-center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    cursor: pointer;
+    height: $height-input;
+    outline: none;
+    padding: 0 16px;
+    transition: all 0.25s ease;
+
+    .v-dropdown__text {
+      white-space: nowrap;
+      font-family: $Misa-font-bold;
+      font-size: 13px;
+      margin-right: 4px;
+      line-height: $height-input;
+    }
+
+    .v-dropdown__icon {
+      @include flex-align-center;
+
+      .v-dropdown__icon {
+        margin-left: 5px;
+      }
+    }
+
+    &.primary {
+      background-color: $bg-green;
+      color: $bg-white;
+
+      &:hover {
+        background-color: $bg-green-hover;
+      }
+
+      &:active {
+        background-color: $bg-green-active;
+      }
+
+      &:focus {
+        background-color: $bg-green-active;
+        box-shadow: 0 0 0 4px $bg-grey-hover;
+        outline: none;
+      }
+    }
+
+    &.secondary-light {
+      border: 1px solid $grey-500;
+      color: $black;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $border-line;
+      }
+
+      &:active {
+        background-color: $border-grey;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px $grey-300;
+      }
+    }
+
+    &.rounded {
+      border-radius: 4px;
+    }
+
+    &.border-bold {
+      border: 2px solid $bg-grey-bold-active;
+    }
+  }
+
+  .v-dropdown__content {
+    z-index: 9999;
+    top: 110%;
+    right: 0;
+    position: absolute;
+    padding: 2px 1px;
+    min-width: 100px;
+    font-weight: 500;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid $border-grey;
+    border-radius: $border-radius;
+    background-color: $white;
+  }
+
+  .v-dropdown__content-item {
+    transition: all 0.2s ease;
+    padding: 4px 10px;
+    font-family: $Misa-font-regular;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover {
+      background-color: $bg-grey-hover;
+    }
+  }
+  .v-dropdown__content-item--active {
+    pointer-events: none;
+    color: $white;
+    background-color: $bg-green;
+  }
+}

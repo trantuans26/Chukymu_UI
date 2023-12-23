@@ -1,0 +1,76 @@
+/* spacing 
+============================================================================================ */
+@include generate-class-spacing("margin", "ms", 0.75rem);
+@include generate-class-spacing("padding", "ps", 0.75rem);
+@include generate-class-spacing("margin", "m", 1rem);
+@include generate-class-spacing("padding", "p", 1rem);
+@include generate-class-spacing("margin", "ml", 1.25rem);
+@include generate-class-spacing("padding", "pl", 1.25rem);
+
+/* color
+============================================================================================ */
+.bg {
+  &-color {
+    &-white {
+      background-color: $white;
+    }
+    &-grey {
+      background-color: $grey-300 !important;
+    }
+    &-transparent {
+      background-color: transparent !important;
+    }
+  }
+}
+.color {
+  &-blue {
+    color: #0075c0 !important;
+  }
+}
+
+.border {
+  &-none {
+    border: none !important;
+  }
+}
+
+.opacity {
+  &-0 {
+    opacity: 0;
+  }
+  &-1 {
+    opacity: 1;
+  }
+  &-5 {
+    opacity: 0.5;
+  }
+}
+.m {
+  &-l-0 {
+    margin-left: 0 !important;
+  }
+  &-r-0 {
+    margin-right: 0 !important;
+  }
+  &-t-0 {
+    margin-top: 0 !important;
+  }
+  &-b-0 {
+    margin-bottom: 0 !important;
+  }
+  &-y-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &-x-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+.error {
+  border: 1px solid $border-red !important;
+
+  &:focus {
+    border: 1px solid $border-red !important;
+  }
+}

@@ -1,0 +1,459 @@
+:root {
+    --tableRow-height: 33px;
+    --tableHeader-height: 34px;
+    --tableFunction-height: 64px;
+/*     --tableBody-width: 1552px; */
+    --tableBody-width: 100%;
+    --tableBody-height: 200px;
+    --tableSpace-width: 19.6px;
+    --tableHeader-color: rgb(229, 232, 236);
+    --tableBody-color: rgb(255, 255, 255);
+    --tableBorder-color: rgb(199, 199, 199);
+    --tableRow-colorfocus-old: #EEF8EC;
+    --tableRow-colorcheck-old: #DCF1D8;
+    --tableRow-colorfocus: rgb(242, 249, 255);
+    --tableRow-colorcheck: rgb(229, 243, 255);
+}
+.table__function {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: var(--tableFunction-height);
+}
+
+.table__batch {
+    width: auto;
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.table__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.table__search i {
+    position: absolute;
+    right: 16px;
+}
+
+.table__reset {
+    padding: 0 16px 0 16px;
+}
+
+.table__exportExcel {
+    padding-right: 16px;
+}
+
+.table__scroll {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.table__scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.table__scroll::-webkit-scrollbar-track {
+    background: rgb(236, 238, 241);
+}
+
+
+.table__scroll::-webkit-scrollbar-thumb {
+    background: #b8bcc3;
+}
+
+.table {
+    font-size: 13px;
+    background-color: var(--tableBody-color);
+    max-height: auto;
+    height: auto;
+    min-height: var(--tableBody-height);
+    max-width: var(--tableBody-width);
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Begin: Header */
+.table__header {
+    height: var(--tableHeader-height);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.table__header table {
+    width: 100%;
+    height: 100%;
+    line-height: var(--tableHeader-height);
+}
+
+.table__header table thead {
+    background-color: var(--tableHeader-color);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--tableBorder-color);
+}
+
+.table__header table thead th {
+    line-height: var(--tableHeader-height);
+}
+/* End: Header */
+
+/* Begin: Body */
+.grid__table--body {
+    height: calc(var(--tableBody-height) - var(--tableHeader-height) - 56px);
+
+}
+
+.grid__table--body > table tbody tr {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--tableBorder-color);
+    height: var(--tableRow-height);
+    line-height: var(--tableRow-height);
+    box-sizing: border-box;
+}
+
+.table__row {
+    position: relative;
+    outline: none;
+}
+
+.table__col--delete {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.table__col--delete:hover {
+    cursor: pointer;
+}
+
+.table__row--space {
+    height: 58px !important;
+    border: none !important;
+}
+
+.table__col--check {
+    display: flex !important;
+    min-width: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+th.table__col--check {
+    background-color: var(--tableHeader-color);
+    height: var(--tableHeader-height);
+}
+
+td.table__col--check {
+    background-color: var(--tableBody-color);
+    height: var(--tableRow-height);
+    border-bottom: 1px solid var(--tableBorder-color);
+}
+
+.table__col--function {
+    min-width: 40px;
+    padding-left: 10px;
+}
+
+th.table__col--function {
+    background-color: var(--tableHeader-color);
+    border-left: 1px solid var(--tableBorder-color);
+    z-index: 6;
+}
+
+td.table__col--function {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: #0075c0;
+    align-items: center;
+    z-index: 0.5;
+    border-left: 1px dotted var(--tableBorder-color);
+}
+
+.table__col--update {
+    cursor: pointer;
+    line-height: 0;
+    padding: 8px 4px;
+    border: 1px solid rgba(0, 0, 0, 0);   
+}
+
+.table__col--update:active {
+    border: 1px solid #0075c0;   
+
+}
+
+.table__col--more {
+    margin-left: 10px;
+    padding: 6px 8px;
+    cursor: pointer;
+    border: rgba(0, 0, 0, 0) 1px solid;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.table__col--more:focus {
+    border: #0075c0 1px solid;
+}
+/* End: Body */
+
+/* Begin: Footer */
+.table__footer {
+    position: absolute;
+    background-color: var(--tableBody-color);
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    padding: 12px 32px 12px 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.table__record {
+    height: 32px;
+    line-height: 32px;
+}
+
+.table__page {
+    margin-right: var(--tableSpace-width);
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.table__size {
+    width: 200px;
+    height: 32px;
+    display: flex;
+    position: relative;
+    margin: 0 16px;
+}
+
+
+
+.table__sizeInput {
+    border-radius: 4px;
+}
+
+
+.table__number {
+
+}
+
+.table__previous {
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.table__next {
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.table__subnumber {
+    padding: 0 6.5px;
+    cursor: pointer;
+}
+
+.table__subnumber::selection,
+.table__previous::selection,
+.table__next::selection {
+    background-color: #fff;
+}
+.table__subnumber--focus {
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+    padding-top: 1px;
+    font-family: notosans bold;
+}
+
+.table__subnumber:hover {
+    font-family: notosans bold;
+}
+
+.table__item--disable {
+    cursor: default!important;
+    color: #9e9e9e
+}
+/* Begin: Footer */
+
+.table__col {
+    border-right: 1px dotted var(--tableBorder-color);
+    padding: 0 10px;
+}
+
+.table__col p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+    white-space:nowrap
+}
+
+th.table__col {
+    border-right: 1px solid var(--tableBorder-color);
+}
+
+.table__col--left {
+    text-align: left;
+}
+    
+.table__col--right {
+    text-align: right;  
+}
+
+.table__col--center {
+    text-align: center;
+}
+
+.table__col--code {
+    min-width: 140px;
+    width: 140px;
+}
+
+.table__col--name {
+    min-width: 180px;
+    width: 180px;
+}
+
+.table__col--quantity {
+    min-width: 100px;
+    width: 100px;
+}
+
+.table__col--birthday {
+    min-width: 100px;
+    width: 100px;
+}
+
+.ttable__col--cost {
+    min-width: 130px;
+    width: 130px;
+    max-width: 130px;
+}
+
+.table__col--total {
+    min-width: 160px;
+    width: 160px;
+    max-width: 160px;
+}
+
+.table__col--departmentName {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.table__col--bankNumber {
+    min-width: 140px;
+    max-width: 140px;
+}
+
+.table__col--bankName {
+    min-width: 160px;
+}
+
+.table__col--bankBranch {
+    min-width: 200px;
+    padding: 0 10px;
+}
+
+/* Begin: Support layout */
+.table__space--20grey {
+    background-color: rgb(236, 238, 241);
+    width: 20px;
+    height: 100%;
+}
+
+.table__space--10greyFunction {
+    background-color: rgb(236, 238, 241);
+    width: 10px;
+    height: 100%;
+}
+
+.table__space--10grey {
+    background-color: rgb(236, 238, 241);
+    width: 10px;
+    height: calc(100% - 10px);
+    position: absolute;
+    right: 10px;
+    z-index: 5;
+}
+
+.table__space--20white {
+    background-color: #fff;
+    width: 20px;
+    height: calc(100% - 10px);
+    position: absolute;
+    left: 0;
+    z-index: 5;
+}
+
+.table__space--20whiteRight {
+    background-color: #fff;
+    width: 20px;
+    height: calc(var(--tableBody-height) - 10px);
+    position: absolute;
+    right: 20px;
+    z-index: 5;
+}
+
+.table__space--10white {
+    background-color: #fff;
+    width: 20px;
+    height: calc(var(--tableBody-height) - 10px);
+    position: absolute;
+    right: 10px;
+    z-index: 4;
+}
+/* End: Support layout */
+
+.table__function [data-title]:after {
+    content: attr(data-title);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    position: absolute;
+    bottom: -30px;
+    right: 15%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 3.5px;   
+    height: 20px;
+    padding: 2px 12px 2px 12px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 4;
+}
+
+[data-title] {
+    position: relative;
+}
+
+.icon--delete {
+    background: url("@/assets/img/qlts-icon.svg") no-repeat -463px -111px;
+	width: 18px;
+	height: 18px;
+}

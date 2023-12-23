@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "MISA Fonts Regular";
+  src: url("@/assets/fonts/notosans-regular.2cb88a13.woff2");
+}
+
+@font-face {
+  font-family: "MISA Fonts Bold";
+  src: url("@/assets/fonts/notosans-bold.3ede5aff.woff2");
+}
+
+@font-face {
+  font-family: "MISA Fonts SemiBold";
+  src: url("@/assets/fonts/notosans-semibold.df3e6dc4.woff2");
+}
+
+/*--------------------------- Fonts ----------------------*/
+$Misa-font-regular: "MISA Fonts Regular";
+$Misa-font-bold: "MISA Fonts Bold";
+
+/*--------------------------- Colors ----------------------*/
+
+$white: #ffffff;
+$black: #000000;
+
+$red-600: #b80000;
+$red-500: #e60000;
+$red-400: #eb3333;
+$red-300: #f06666;
+
+$blue-600: #0062cc;
+$blue-500: #007aff;
+$blue-400: #3395ff;
+$blue-300: #66afff;
+
+/* $green-600: #067933;
+$green-500: #089740;
+$green-400: #39ac66;
+$green-300: #6bc18d; */
+$green-600: #067933;
+$green-500: #089740;
+$green-400: #39ac66;
+$green-300: #6bc18d;
+
+/* $light-green-600: #409330;
+$light-green-500: #50b83c;
+$light-green-400: #73c663;
+$light-green-300: #96d58a; */
+
+$light-green-600: #0062cc;
+$light-green-500: #007aff;
+$light-green-400: #3395ff;
+$light-green-300: #66afff;
+
+$grey-700: #393a3d;
+$grey-600: #757575;
+$grey-500: #9e9e9e;
+$grey-400: #bdbdbd;
+$grey-300: #e0e0e0;
+
+/*--------------------------- Text-color -------------------------*/
+$text-blue: $blue-600;
+$text-green: $green-500;
+$text-grey: $grey-500;
+/*--------------------------- Border -------------------------*/
+
+$border-red: $red-500;
+$border-grey: $grey-400;
+$border-line: $grey-300;
+$border-green: $light-green-600;
+
+$border-radius: 4px;
+//$border-radius: 2px;
+
+/*--------------------------- Background-color ----------------------*/
+
+$bg-white: #ffffff;
+$bg-black: #38393d;
+
+$bg-green-hover: rgb(66, 75, 178);
+$bg-green: rgb(44, 49, 115);
+$bg-green-active: rgb(24, 27, 64);
+// $bg-green: $light-green-500;
+//$bg-green: rgb(77, 139, 85);
+// $bg-green-hover: $light-green-400;
+//$bg-green-hover: rgb(90, 163, 99);
+// $bg-green-active: $light-green-600;
+//$bg-green-active: rgb(48, 87, 53);
+
+$bg-warning: #f49342;
+$bg-error: $red-500;
+$bg-success: $light-green-500;
+
+$bg-grey: $grey-500;
+$bg-grey-hover: $grey-300;
+$bg-grey-active: $grey-400;
+$bg-grey-bold: #1f1f1f;
+$bg-grey-bold-hover: $grey-600;
+$bg-grey-bold-active: $grey-700;
+
+/*------ SideBar -------*/
+$bg-sidebar: rgb(13, 24, 61);
+$text-sidebar: $white;
+$text-sidebar-hover: rgba(#d4d7dc, 0.2);
+$border-left-sidebar: rgb(227, 193, 120);
+
+/*------ Content -------*/
+$bg-content: rgb(217, 225, 251);
+
+/*------ Table -------*/
+$bg-table-header: rgb(194, 207, 248);
+$bg-table-body: #ffffff;
+$bg-table-line: #c7c7c7;
+$bg-table-body-hover: #f2f9ff;
+$bg-table-body-focus: #e5f3ff;
+
+/*------ Toast -------*/
+$bg-toast: $white;
+$bg-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+$bg-toast-info: #009eeb;
+
+/*------ Tooltip -------*/
+$bg-tooltip: $grey-700;
+
+/*------ Height of input, button, select, textarea, ... -------*/
+$height-input: 32px;
+$height-button: 36px;
+
+/*------ Height of header-cell, row-cell, ... -------*/
+$height-header-cell: 34px;
+$height-row-cell: 44px;
+// $height-header-cell: 48px;
+// $height-row-cell: 48px;
+
+/*--------------------------- Sprire Svg ----------------------*/
+
+$sprite-img: "@/assets/img/Sprites.64af8f61.svg";
+$sprite-img-v2: "@/assets/img/Sprites.d78db031.svg";
+/*--------------------------- Logo Header ----------------------*/
+
+$logo-header: "@/assets/img/Logo_Module_TiengViet_White.66947422.svg";
