@@ -2168,6 +2168,7 @@ button:focus {
 
 .v-date__picker {
   position: relative;
+  
 }
 .v-date__picker-label {
   cursor: pointer;
@@ -2459,7 +2460,7 @@ button:focus {
   width: auto;
   height: 42px;
   padding: 0 14px 0 8px;
-  border-left: 6px transparent solid;
+  border-bottom: 6px transparent solid;
   text-decoration: none;
   cursor: pointer;
   display: flex;

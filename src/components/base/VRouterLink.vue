@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="scss">
 .router-link-active {
-    border-left-color: $border-left-sidebar;
+    border-bottom-color: $border-left-sidebar;
     background-color: rgb(52, 62, 93);
 
     .sidebar__item--icon {

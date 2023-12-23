@@ -92,6 +92,7 @@ export default {
     EDIT: "edit",
     // Chế độ Nhân bản
     DUPLICATE: "duplicate",
+    VOTE: "vote",
     // Null
     NULL: null,
   },
@@ -129,6 +130,7 @@ export default {
     EXPORT: "export",
     // Trợ giúp
     HELP: "help",
+    VOTE: "vote",
     // Null
     NULL: null,
     // Collapse thanh sidebar

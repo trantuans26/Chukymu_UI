@@ -5,7 +5,7 @@
             <template #title>
                 <div class="row e-header">
                     <div class="e-header__title col font-weight-700">
-                        {{ $t('employee_info.title') }}
+                        Bỏ phiếu nhân viên
                     </div>
                 </div>
             </template>
@@ -17,30 +17,33 @@
                                 <div class="form-group col l-5 md-5 c-5 focus">
                                     <v-input :label="$t('employee_info.code')" v-model="employee.employeeCode"
                                         ref="employeeCode" @validate="setValid('employeeCode', $event)" :maxLength="100"    
-                                       :errorLabel="$t('employee_info.code')">
+                                        :required="true" :errorLabel="$t('employee_info.code')"
+                                        :disabled="true"
+                                    >
                                     </v-input>
                                 </div>
                                 <div class="form-group col l-7 md-7 c-7">
                                     <v-input :label="$t('employee_info.name')" v-model="employee.employeeName"    
-                                        ref="employeeName" @validate="setValid('employeeName', $event)" :maxLength="100"
-                                         :errorLabel="$t('employee_info.name')">
+                                        ref="employeeName" @validate="setValid('employeeName', $event)" :maxLength="100" :disabled="true"
+                                        :required="true" :errorLabel="$t('employee_info.name')">
                                     </v-input>
                                 </div>
                                 <div class="form-group col l-5 md-5 c-5">
                                     <v-input :label="$t('employee_info.phone_number')" v-model="employee.phone"
-                                        
-                                        :isPhoneNumber="true" :isNumber="true" :errorLabel="$t('employee_info.phone_number')"
-                                         :tooltipText="$t('employee_info.phone_number_label')"
+                                        :required="true"
+                                        :isPhoneNumber="true" :isNumber="true" :errorLabel="$t('employee_info.phone_number')" :disabled="true"
+                                        :validateCheck="true" :tooltipText="$t('employee_info.phone_number_label')"
                                         tooltipPosition="right">
                                     </v-input>
                                 </div>
                                 <div class="form-group col l-7 md-7 c-7">
-                                    <v-input :label="$t('employee_info.email')" v-model="employee.email" :isEmail="true"
-                                        :errorLabel="$t('employee_info.email')" > </v-input>
+                                    <v-input :label="$t('employee_info.email')" v-model="employee.email" :isEmail="true" :disabled="true"
+                                        :required="true"
+                                        :errorLabel="$t('employee_info.email')" :validateCheck="true"> </v-input>
                                 </div>
                                 <div class="form-group col l-12 md-12">
-                                    <v-input :label="$t('employee_info.address')" v-model="employee.address"
-                                        :maxLength="255"     :errorLabel="$t('employee_info.address')">
+                                    <v-input :label="$t('employee_info.address')" v-model="employee.address" :disabled="true"
+                                        :maxLength="255" :validateCheck="true" :errorLabel="$t('employee_info.address')">
                                     </v-input>
                                 </div>
                             </div>
@@ -48,9 +51,9 @@
                         <div class="col l-6 md-6">
                             <div class="row sm-gutter">
                                 <div class="form-group col l-5 md-5">
-                                    <v-date-picker :label="$t('employee_info.date_of_birth')"
-                                        v-model="employee.dateOfBirth" :isLessThanToday="true"
-                                        :errorLabel="$t('employee_info.date_of_birth')" >
+                                    <v-date-picker :label="$t('employee_info.date_of_birth')" 
+                                        v-model="employee.dateOfBirth" :isLessThanToday="true" disabled="true"
+                                        :errorLabel="$t('employee_info.date_of_birth')" :validateCheck="true">
                                     </v-date-picker>
                                 </div>
                                 <div class="form-group col l-7 md-7">
@@ -58,37 +61,44 @@
                                     </label>
                                     <div class="row ml-x-1 justify-content-between e-body__gender">
                                         <v-input type="radio" :label_custom="$t('employee_info.male')" :value=1
+                                            :disabled="true"
                                             v-model="employee.gender">
                                         </v-input>
-                                        <v-input type="radio" :label_custom="$t('employee_info.female')" :value=0
+                                        <v-input type="radio" :label_custom="$t('employee_info.female')" :value=0 :disabled="true"
                                             v-model="employee.gender">
                                         </v-input>
-                                        <v-input type="radio" :label_custom="$t('employee_info.other')" :value=2
+                                        <v-input type="radio" :label_custom="$t('employee_info.other')" :value=2 :disabled="true"
                                             v-model="employee.gender">
                                         </v-input>
                                     </div>
                                 </div>
                                 <div class="form-group col l-7 md-7">
                                     <v-input :label="$t('employee_info.identity_card')"
-                                        v-model="employee.identityNumber"
+                                        v-model="employee.identityNumber" :validateCheck="true" :disabled="true"
                                         :errorLabel="$t('employee_info.identity_card')" :isNumber="true"
                                         tooltipPosition="right" :tooltipText="$t('employee_info.identity_card_label')">
                                     </v-input>
                                 </div>
                                 <div class="form-group col l-5 md-5">
                                     <v-date-picker :label="$t('employee_info.issued_date')"
-                                        :isLessThanValue="employee.identityDate"
+                                        :isLessThanValue="employee.identityDate" :validateCheck="true" :disabled="true"
                                         :isLessThanToday="true" :errorLabel="$t('employee_info.issued_date')"
                                         :isLessThanValueLabel="$t('employee_info.date_of_birth')"
                                         v-model="employee.identityDate" />
                                 </div>
                                 <div class="form-group col l-12 md-12">
-                                    <v-input :label="$t('employee_info.issued_by')" v-model="employee.identityPlace"
-                                        :maxLength="255"
+                                    <v-input :label="$t('employee_info.issued_by')" v-model="employee.identityPlace" :disabled="true"
+                                        :maxLength="255" :validateCheck="true"
                                         :errorLabel="$t('employee_info.issued_by')">
                                     </v-input>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row sm-gutter">
+                        <div class="form-group col l-3 md-3">
+                            <v-input label="Nhập chữ ký" v-model="employee.bankNumber">
+                            </v-input>
                         </div>
                     </div>
                 </div>
@@ -143,11 +153,12 @@ export default {
                 bankNumber: "",
                 bankName: "",
                 bankBranch: "",
+                isEmployee: false,
+                isSupplier: false,
                 createdDate: "",
                 createdBy: "",
                 modifiedDate: "",
-                modifiedBy: "",
-                voteStatus: 0
+                modifiedBy: ""
             },
             attemptSubmit: true, // biến kiểm tra đã submit form chưa
             Enum: Enum, // dùng để gọi Enum trong template 
@@ -157,6 +168,26 @@ export default {
     },
     computed: {
         ...mapGetters(["getEmployeeId"]),
+
+        checkDisableIsEmployee: {
+            get() {
+                if (this.employee.isManager == false && this.employee.isEmployee == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+
+        checkDisableIsManager: {
+            get() {
+                if (this.employee.isEmployee == false && this.employee.isManager == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
 
         /**
          * @description: Get và set trạng thái của form lưu trữ trong store 
@@ -206,6 +237,9 @@ export default {
                 switch (formMode) {
                     case Enum.FORM_MODE.ADD:
                         await self.resetForm();
+                        break;
+                    case Enum.FORM_MODE.VOTE:
+                    await self.getEmployeeById();
                         break;
                     case Enum.FORM_MODE.EDIT:
                         await self.getEmployeeById();
@@ -266,7 +300,6 @@ export default {
         async closeFormHandle() {
             try {
                 const self = this;
-
                 self.resetForm(false);
                 self.$emit("update:modelValue", false);
                 self.$store.dispatch("setMode", null);
@@ -317,7 +350,8 @@ export default {
                     self.employee = { // gán giá trị mặc định cho employee
                         employeeCode: response.data,
                         gender: 1,
-                        voteStatus: 0
+                        isEmployee: true,
+                        isManager: false,
                     };
                 }
             } catch (error) {
@@ -390,6 +424,9 @@ export default {
                         case Enum.FORM_MODE.ADD: // nếu action form là add thì thực hiện insert
                             result = await self.insertEmployee();
                             break;
+                        case Enum.FORM_MODE.VOTE: // nếu action form là add thì thực hiện insert
+                            result = await self.insertEmployee();
+                            break;
                         case Enum.FORM_MODE.EDIT: // nếu action form là edit thì thực hiện update
                             result = await self.updateEmployee();
                             break;
@@ -399,9 +436,6 @@ export default {
                     }
                     if (result) { // nếu insert thành công thì xử lý action form
                         switch (action) {
-                            case Enum.ACTION.SAVE_AND_CLOSE: // nếu nhấn cất
-                                self.closeFormHandle();
-                                break;
                             case Enum.ACTION.SAVE_AND_ADD: // nếu nhấn cất và thêm
                                 self.formMode = Enum.FORM_MODE.NULL;
                                 self.formMode = Enum.FORM_MODE.ADD;

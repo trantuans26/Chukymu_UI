@@ -44,7 +44,7 @@
   &__item {
     @include box(auto, 42px);
     padding: 0 14px 0 8px;
-    border-left: 6px transparent solid;
+    border-bottom: 6px transparent solid;
     text-decoration: none;
     cursor: pointer;
     @include flex-align-center;

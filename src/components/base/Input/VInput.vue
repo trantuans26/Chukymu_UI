@@ -281,14 +281,6 @@ export default {
                     temp = null;
                 }
                 self.$emit("update:modelValue", temp);
-                if (self.validateCheck || self.required) {
-                    // nếu validateCheck = true thì validate cho trường dữ liệu không bắt buộc nhưng cố tình nhập sai
-                    self.errorMess = "";
-                    self.$nextTick(() => {
-                        // sau khi set giá trị thì kiểm tra validate
-                        self.validate();
-                    });
-                }
             },
         },
 
@@ -493,10 +485,6 @@ export default {
                 if (self.tempValue != null && Number(self.tempValue) > 0) {
                     this.valueHeader = format.formatNumberShow(self.tempValue, 2);
                 }
-            }
-            if (self.required || self.validateCheck) { // validate khi input đã thay đổi
-                self.validate();
-                self.$emit('validate', { error: self.error, errorMess: self.errorMess });
             }
         },
         /**

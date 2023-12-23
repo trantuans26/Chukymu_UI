@@ -88,6 +88,23 @@ export function convertGender(number) {
     return t("employee_info.other");
   }
 }
+
+/**
+ * @description: Hàm này dùng để convert giới tính từ số sang chuỗi
+ * @param: number - Giới tính dạng số
+ * @return: string - Giới tính dạng chuỗi
+ * Author: tttuan 12/09/2022
+ */
+export function convertVoteStatus(number) {
+  if (number === 0) {
+    return t("employee_info.HaveNotVote");
+  } else if (number === 1) {
+    return t("employee_info.AreVoting");
+  } else {
+    return t("employee_info.voted");
+  }
+}
+
 /**
  * @description: Hàm này dùng để convert giảm thuế từ số sang chuỗi
  * @param: {any}
@@ -227,6 +244,7 @@ export default {
   formatNumber,
   removeVietnameseTones,
   convertGender,
+  convertVoteStatus,
   formatCurrency,
   formatNumberShow,
   convertStatus,

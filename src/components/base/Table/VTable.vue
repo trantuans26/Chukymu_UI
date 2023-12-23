@@ -83,6 +83,9 @@
                             <template v-else-if="column.type === 'gender'">
                                 {{ convertGender(row[column.key]) }}
                             </template>
+                            <template v-else-if="column.type === 'voteStatus'">
+                                {{ convertVoteStatus(row[column.key]) }}
+                            </template>
                             <!-- Nếu như type là currency thì render tiền tệ -->
                             <template v-else-if="column.type === 'currency'">
                                 {{ formatCurrency(row[column.key]) }}
@@ -154,7 +157,7 @@
 </template>
 <script>
 
-import { formatDate, convertGender, formatCurrency, convertStatus } from '@/utils/format';
+import { formatDate, convertGender, formatCurrency, convertStatus, convertVoteStatus } from '@/utils/format';
 import Enum from '@/utils/enum';
 import VTableFilter from './VTableFilter'
 import format from '@/utils/format';
@@ -308,7 +311,7 @@ export default {
                 }, this.delay);
             }
         },
-        formatDate, convertGender, formatCurrency, convertStatus,
+        formatDate, convertGender, formatCurrency, convertStatus, convertVoteStatus,
         /**
           * @description: Hàm này gọi dùng để truyền các action sau khi chọn của row
           * trong table lên component cha

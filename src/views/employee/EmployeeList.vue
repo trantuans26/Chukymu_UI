@@ -16,23 +16,6 @@
                             :isShow="isEmployeeSelected">
                             {{ $t('action.batch_action') }}
                         </v-dropdown>
-
-                        <div class="v-table__column-filter">
-                            <div class="v-table__column-filter--text">
-                                {{ $t("invoice_page.filter") }}: 
-                            </div>
-                        </div>
-                        <div class="v-table__column-filter">
-                            <div class="row sm-gutter flex--center">
-                                <div class="col l-8 md-8">
-                                    <v-combobox position="bottom" propKey="key" propValue="value" 
-                                        v-model="selectedOptions" 
-                                        :data="listOptions"
-                                        :selectBox="true">
-                                    </v-combobox>
-                                </div>
-                            </div>
-                        </div>
                     </slot>
                 </div>
                 <div class="employee-body__toolbar-right">
@@ -44,8 +27,6 @@
                     <div :tooltip="$t('action.reload_data')" class="ms-24 ms-icon ms-icon-reload ms-r-2 ml-l-2"
                         @click="handleAction(Enum.ACTION.RELOAD)">
                     </div>
-                    <div :tooltip="$t('action.export_excel')" class="ms-24 ms-icon ms-icon-excel ms-x-2"
-                        @click="handleAction(Enum.ACTION.EXPORT)"></div>
                 </div>
             </div>
             <!-- Table hiển thị danh sách nhân viên -->
@@ -61,20 +42,25 @@
         <employee-form v-model="showEmployeeForm" @insertEmployee="insertEmployee" @updateEmployee="updateEmployee">
         </employee-form>
         <!-- Khu vực hiển thị popup và toast thông báo -->
+
+        <employee-vote v-model="showEmployeeVote" @insertEmployee="insertEmployee" @updateEmployee="updateEmployee">
+        </employee-vote>
         <v-popup ref="popup"></v-popup>
         <v-toast ref="toast" :showProgress="true" :maxMessage="10"></v-toast>
     </div>
 </template>
 <script>
 import EmployeeForm from './EmployeeForm.vue';
+import EmployeeVote from './EmployeeVote.vue';
 import Enum from "@/utils/enum";
 import { mapGetters } from 'vuex';
 export default {
-    components: { EmployeeForm },
+    components: { EmployeeForm, EmployeeVote},
     data() {
         return {
             keyword: "", // biến này dùng để lưu từ khóa tìm kiếm
             showEmployeeForm: false, // biến này dùng để hiển thị form thêm mới hoặc cập nhật nhân viên
+            showEmployeeVote: false, // biến này dùng để hiển thị form thêm mới hoặc cập nhật nhân viên
             employeeList: [], // biến này dùng để lưu danh sách nhân viên
             pagination: {
                 pageNumber: 1,
@@ -145,8 +131,17 @@ export default {
 
                     },
                     {
+                        title: this.$t(`employee_table.phone_number`),
+                        key: 'phone',
+                    },
+                    {
                         title: this.$t(`employee_table.identity_card`),
                         key: 'identityNumber',
+                    },
+                    {
+                        title: this.$t(`employee_table.vote_status`),
+                        key: 'voteStatus',
+                        type: 'voteStatus'
                     },
                     {
                         title: this.$t(`employee_table.action`),
@@ -179,6 +174,10 @@ export default {
         tableAction: {
             get() {
                 return [
+                    {
+                        'key': Enum.ACTION.VOTE,
+                        'value': this.$t('action.vote'),
+                    },
                     {
                         'key': Enum.ACTION.DUPLICATE,
                         'value': this.$t('action.duplicate'),
@@ -292,6 +291,9 @@ export default {
                     case Enum.ACTION.ADD: // thêm mới nhân viên
                         me.showAddEmployeeForm();
                         break;
+                    case Enum.ACTION.VOTE: // thêm mới nhân viên
+                        me.showVoteEmployeeForm(data);
+                        break;
                     case Enum.ACTION.EDIT: // sửa nhân viên
                         me.showEditEmployeeForm(data);
                         break;
@@ -310,9 +312,6 @@ export default {
                     case Enum.ACTION.RELOAD: // Tải lại danh sách nhân viên
                         me.reloadData();
                         break;
-                    case Enum.ACTION.EXPORT: // Xuất file excel
-                        me.exportExcel();
-                        break;
                 }
             } catch (error) {
                 console.log(error);
@@ -326,6 +325,16 @@ export default {
             const me = this;
             me.$store.dispatch('setMode', Enum.FORM_MODE.ADD);
             me.showEmployeeForm = true;
+        },
+        /**
+         * @description: Hàm này dùng để hiển thị form thêm mới nhân viên
+         * Author: tttuan 07/10/2022
+         */
+        showVoteEmployeeForm(employee) {
+            const me = this;
+            me.$store.dispatch('setMode', Enum.FORM_MODE.VOTE);
+            me.$store.dispatch('setEmployeeId', employee.employeeID);
+            me.showEmployeeVote = true;
         },
         /**
          * @description: Hàm này dùng để sửa nhân viên
@@ -392,26 +401,6 @@ export default {
                 me.$root.$toast.success(me.$t('notice_message.reload_data_success'));
             } else {
                 me.$root.$toast.error(me.$t('notice_message.reload_data_fail'));
-            }
-        },
-        /**
-         * @description: Hàm này dùng để xuất danh sách nhân viên ra file excel
-         * Author: tttuan 05/10/2022
-         */
-        async exportExcel() {
-            const me = this;
-            try {
-                me.$root.$toast.info(me.$t('notice_message.export_excel_processing'));
-                const res = await me.$api.employee.exportEmployees(me.pagination); // kiểm tra xem có dữ liệu không
-                if (res.status == Enum.MISA_CODE.SUCCESS) {
-                    const link = document.createElement('a'); // tạo thẻ a để download file
-                    link.href = res.request.responseURL; // đường dẫn tải file
-                    link.click();
-                    me.$root.$toast.success(me.$t('notice_message.export_excel_success'));
-                }
-            } catch (error) {
-                me.$root.$toast.error(me.$t('notice_message.export_excel_fail'));
-                console.log(error);
             }
         },
         /**
@@ -527,12 +516,6 @@ export default {
     updated() {
         let me = this;
         me.employeesSelectedByID = this.$store.getters.getListIdSelected;
-
-        me.listOptions = [
-            {'key': 2, 'value': this.$t("filter.all")}, 
-            {'key': 1, 'value': this.$t("filter.is_manager")}, 
-            {'key': 0, 'value': this.$t("filter.is_employee")}
-        ];
     },
 }
 </script>

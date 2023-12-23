@@ -20,18 +20,6 @@ const router = [
     },
   },
   {
-    path: "/tong-quan",
-    component: lazyLoad("overview/OverviewDashboard"),
-    meta: {
-      title: "Tổng quan",
-    },
-    sideBar: {
-      icon: "ms-icon ms-icon-dashboard",
-      title: "overview",
-      order: 1,
-    },
-  },
-  {
     path: "/nhan-vien",
     component: lazyLoad("employee/EmployeeList"),
     meta: {
@@ -43,18 +31,6 @@ const router = [
       order: 2,
     },
   },
-/*   {
-    path: "/ban-hang",
-    component: lazyLoad("sales/SalesList"),
-    meta: {
-      title: "Bán hàng",
-    },
-    sideBar: {
-      icon: "ms-icon ms-icon-sell",
-      title: "sales",
-      order: 5,
-    },
-  }, */
   {
     path: "/hoa-don-ban-hang",
     component: lazyLoad("invoice/InvoiceList"),

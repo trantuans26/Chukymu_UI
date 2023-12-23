@@ -66,7 +66,8 @@
     "inactive": "Ngưng sử dụng",
     "active": "Sử dụng",
     "more_action": "Chức năng khác",
-    "table_setting": "Tùy chỉnh giao diện"
+    "table_setting": "Tùy chỉnh giao diện",
+    "vote": "Bỏ phiếu"
   },
 
   "table_filter": {
@@ -257,9 +258,8 @@
     "identity_card": "Số CMND",
     "job_title": "Chức danh",
     "department": "Đơn vị",
-    "bank_number": "Số tài khoản",
-    "bank_name": "Tên ngân hàng",
-    "bank_branch": "Chi nhánh ngân hàng",
+    "phone_number":"ĐT di động",
+    "vote_status": "Trạng thái bỏ phiếu",
     "action": "Chức năng"
   },
   "employee_info": {
@@ -283,11 +283,9 @@
     "home_phone_number": "ĐT cố định",
     "home_phone_number_label": "Điện thoại cố định",
     "email": "Email",
-    "bank_number": "Tài khoản ngân hàng",
-    "bank_name": "Tên ngân hàng",
-    "bank_branch": "Chi nhánh",
-    "is_employee": "Là nhân viên",
-    "is_manager": "Là quản lý"
+    "voted": "Đã bỏ phiếu",
+    "AreVoting": "Đang bỏ phiếu",
+    "HaveNotVote": "Chưa bỏ phiếu"
   },
 
   "inventory_page": {

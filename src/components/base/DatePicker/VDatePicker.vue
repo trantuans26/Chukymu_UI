@@ -4,6 +4,7 @@
             {{ label }} <span v-if="required"> * </span>
         </div>
         <date-picker :required="required" pickerType="date" format="DD/MM/yyyy" :locale="locale" :allowClear="true"
+            :disabled="disabled"
             v-model:value="defaultPickerValue" @focus="onHandleBorder" @blur="onHandleBorder">
             <template #nextIcon>
                 <div class="ms-24 ms-icon ms-icon-arrow-right"></div>
@@ -83,6 +84,12 @@ export default {
             required: false,
             default: false,
         },
+        disabled: {
+            // Disabled for input
+            type: Boolean,
+            required: false,
+            default: false,
+        }
     },
     data() {
         return {

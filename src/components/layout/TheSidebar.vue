@@ -16,7 +16,7 @@
         </div>
         <div class="sidebar__content">
             <div class="sidebar__item__list" style="display: flex;">
-                <div v-for="(item, index) of routerLinks.filter((router) => permission ? router : router.sideBar.title == 'overview' || router.sideBar.title == 'manage_invoice')" :key="index">
+                <div v-for="(item, index) of routerLinks" :key="index">
                     <VRouterLink :link="item.path" :content="item.sideBar.title" :icon="item.sideBar.icon" />
                 </div>
             </div>
@@ -66,16 +66,6 @@ export default {
             });
             return routes;
         },
-
-        permission() {
-            let permission = this.$store.getters.getPermission;
-            
-            if(permission && permission.isManager) {
-                return true;
-            }
-            
-            return false;
-        }
     },
 }
 </script>
